@@ -100,85 +100,142 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Interview with FM7" startnode="1" creator="Twine" creator-version="2.3.9" ifid="3F5868B8-9F67-4F91-98B6-E490997B8F75" zoom="0.6" format="SugarCube" format-version="2.31.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400');
-@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
+	<tw-storydata name="Interview with FM7" startnode="1" creator="Twine" creator-version="2.3.9" ifid="3F5868B8-9F67-4F91-98B6-E490997B8F75" zoom="0.6" format="SugarCube" format-version="2.31.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@font-face {font-family: GothamMedium; src:url("fonts/GothamMedium.otf");}
+@font-face {font-family: GothamBold;src: url("fonts/GothamBold.otf");}
+@font-face {font-family: GothamBook;src: url("fonts/GothamBook.otf");}
 body{
-background-color:#163246;
-font-family: 'Montserrat', sans-serif;
+background-color:#e1deca;color:#000;
+font-family: 'GothamMedium','GothamBold','GothamBook',sans-serif;
 }
 #ui-bar{display:none;}
 #story{margin:3.5em;}
-a{  color:white;}
+#ui-dialog-body{width:100%;height:100%;font-size:1em;background-color:#000;;color:#828500;}
+#ui-dialog-titlebar {background-color:#828500;color:#e1deca;;height:1.3em;font-size:0.6em;}
+a{color:#828500;}
 a:hover{ opacity:0.6;}
 
 .top{
-text-align:center;
-font-size:120%;
-font-weight:900;}
+text-align:left;
+font-size:0.7em;
+font-weight:900;
+color:#828500;}
 
 .left{
 position:relative;
 right:0px;
-width:80%;
+width:100%;
 clear:right;
-text-align:left;}
+text-align:left;
+color:#de5b2a;
+font-weight:500;}
 
 .right{
 position:relative;
-width:60%;
+width:100%;
 float:right;
 clear:left;
-text-align:right;}
+text-align:right;
+font-weight:500;
+color:#255c91;}
 
-.content{
-background-color:#244A77;
-border: 3px solid #153959;
+.left .content{
+background-color:#de5b2a;
 border-radius: 0.6em; 
-color:#f2f2f2;
+color:#e1deca;
+text-align:left;
 margin-top:-1.6em;
 padding: 1em 1em 1em;}
 
-.whatsapp .right .content{
-background-color:#c9faac;
-border: 1px solid #999999;
+.right .content{
+background-color:#255c91;
 border-radius: 0.6em; 
-color:#000000;
+color:#e1deca;
+margin-top:-1.6em;
+padding: 1em 1em 1em;}
+
+.caption{font-size:0.8em;}
+
+.talk a{font-style: italic;}
+
+.extend a{color:#e1deca;opacity:0.6;}
+.time { font-size:2.2em;}
+.time #ui-dialog-titlebar{display:none;}
+
+.dark {background-color:#000;color:#e1deca;}
+.macro-button {
+  background-color: #e1deca;
+  color: #828500;
+  border: 2px solid #828500;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.macro-button:hover {
+  background-color: #828500;border: 2px solid #828500;color: #e1deca;
+}
+
+.whatsapp {background-color:#f0f0f0;}
+.whatsapp .top {color:#000000;}
+.whatsapp .right {color:#842da1;}
+.whatsapp .left {color:#000000;}
+
+.whatsapp .right .content{
+background-color:#842da1;
+border: 0px solid #999999;
+border-radius: 0.6em; 
+color:#fff;
 margin-top:-1.6em;
 padding: 1em 1em 1em;}
 
 .whatsapp .left .content{
-background-color:#f2f2f2;
-border: 1px solid #999999;
+background-color:#e3e3e3;
+border: 0px solid #999999;
 border-radius: 0.6em; 
 color:#000000;
 margin-top:-1.6em;
 padding: 1em 1em 1em;}
+
+.whatsapp .macro-button{
+background-color: #f0f0f0;
+color: #000000;
+border: 2px solid #842da1;}
+
+.whatsapp .macro-button:hover{
+background-color: #842da1;
+color: #fff;
+border: 2px solid #842da1;}
+
+#passages hr {border-top-color: black;}
+#noIcon a.link-external:after {content: "";}
 
 .middle{
 position:relative;
 text-align:center;}
 
-.choice{
-  /*#A76C53*/
-  background-color:#B89FC3;
-  border: 1px solid #999999;
-  border-radius: 0.6em;}
-
-.whatsapp .choice{
-  background-color:#f2f2f2;
-  border: 3px solid #153959;
-  border-radius: 0.6em;
-  color:black;}
-
-.choice:hover{opacity:0.5;}
-
 .container {
   position: relative;
+  display:block;
   overflow: hidden;
   width: 100%;
-  padding-top: 56.25%;}
+  height:100%;
+  padding-top: 60%;}
 
+.ad{
+  text-align:center;
+  background-color:#e1deca;
+  border: 0px solid #999999;
+  border-radius: 0em; 
+  color:#000;
+  margin-top:-1.6em;
+  padding: 1em 1em 1em;
+  height:8em;
+}
 .responsive-iframe {
   position: absolute;
   top: 0;
@@ -191,315 +248,431 @@ text-align:center;}
   display:block;
   overflow:hidden;}
 
-#iframeBg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index:-1;}
 
 /* loading dots */
-.loading {
-width:100px;
-height:30px;
-background-color:#244A77;
-border: 3px solid #153959;
-border-radius: 0.6em; 
-color:#f2f2f2;
-font-size:3em;
-margin-top:0em;
-padding: 1em 1em 1em;}
-
-.loading:after {
-  content: ' .';
-  animation: dots 2s steps(15, end) infinite;}
-
-@keyframes dots {
-  0%, 20% {
-    color: rgba(0,0,0,0);
-    text-shadow:
-      .25em 0 0 rgba(0,0,0,0),
-      .5em 0 0 rgba(0,0,0,0);}
-  40% {
-    color: white;
-    text-shadow:
-      .25em 0 0 rgba(0,0,0,0),
-      .5em 0 0 rgba(0,0,0,0);}
-  60% {
-    text-shadow:
-      .25em 0 0 white,
-      .5em 0 0 rgba(0,0,0,0);}
-  80%, 100% {
-    text-shadow:
-      .25em 0 0 white,
-      .5em 0 0 white;}}
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="scene1" color="red"></tw-tag><tw-passagedata pid="1" name="story begins" tags="" position="98,198" size="100,100">&lt;div class=&quot;top&quot;&gt;MacLean 17th floor, New Arts Journalism lounge
-&lt;hr&gt;
-&lt;/div&gt;
+.lds-spinner {
+  color: official;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-spinner div {
+  transform-origin: 40px 40px;
+  animation: lds-spinner 1.2s linear infinite;
+}
+.lds-spinner div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 37px;
+  width: 6px;
+  height: 18px;
+  border-radius: 20%;
+  background: #fff;
+}
+.lds-spinner div:nth-child(1) {
+  transform: rotate(0deg);
+  animation-delay: -1.1s;
+}
+.lds-spinner div:nth-child(2) {
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+.lds-spinner div:nth-child(3) {
+  transform: rotate(60deg);
+  animation-delay: -0.9s;
+}
+.lds-spinner div:nth-child(4) {
+  transform: rotate(90deg);
+  animation-delay: -0.8s;
+}
+.lds-spinner div:nth-child(5) {
+  transform: rotate(120deg);
+  animation-delay: -0.7s;
+}
+.lds-spinner div:nth-child(6) {
+  transform: rotate(150deg);
+  animation-delay: -0.6s;
+}
+.lds-spinner div:nth-child(7) {
+  transform: rotate(180deg);
+  animation-delay: -0.5s;
+}
+.lds-spinner div:nth-child(8) {
+  transform: rotate(210deg);
+  animation-delay: -0.4s;
+}
+.lds-spinner div:nth-child(9) {
+  transform: rotate(240deg);
+  animation-delay: -0.3s;
+}
+.lds-spinner div:nth-child(10) {
+  transform: rotate(270deg);
+  animation-delay: -0.2s;
+}
+.lds-spinner div:nth-child(11) {
+  transform: rotate(300deg);
+  animation-delay: -0.1s;
+}
+.lds-spinner div:nth-child(12) {
+  transform: rotate(330deg);
+  animation-delay: 0s;
+}
+@keyframes lds-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="scene1" color="red"></tw-tag><tw-passagedata pid="1" name="story begins" tags="" position="97.33333333333333,100.33333333333333" size="100,100">&lt;div class=&quot;top&quot;&gt;MacLean 17th floor, New Arts Journalism lounge&lt;/div&gt;
 &lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Manisha&#39;s friend:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;&quot;Manisha, check out this poster. I am thinking of going for a study trip this winter semester, this one seems going to be interesting. Wanna go together?&quot;
+&lt;img src=&quot;img/poster.png&quot; width=&quot;60%&quot; height=&quot;auto&quot;&gt;
 
-[Image of a poster about the study trip
-&quot;WINTER 2017
-CUBA: Society in Transition
-led by Rachel Weiss, Elizabeth Cerejido&quot;]
-&lt;/div&gt;
+&lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;This study trip to Cuba seems interesting.&lt;/div&gt;
 &lt;/div&gt;
 
------------------------------------------------
 &lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Sign up for the study trip.|landed Havana]]
-&lt;/div&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Ermm,nope.|Need to finish a report tonight]]&lt;/div&gt;
-&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="2" name="landed Havana" tags="" position="300,198" size="100,100">&lt;div class=&quot;top&quot;&gt;January 2017 Havana, Cuba
-&lt;hr&gt;
-&lt;/div&gt;
-Just landed Havana. The team checked in the hotel. 
-Tomorrow&#39;s schedule is to visit Instituto Superior de Arte (ISA)--The National Art Schools of Cuba.
+&lt;&lt;button &quot;Sign up for the study trip&quot; &quot;landed Havana&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Maybe for next year&quot; &quot;Need to finish a report tonight&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="landed Havana" tags="" position="218.66666666666666,99.33333333333333" size="100,100">&lt;div class=&quot;top&quot;&gt;Havana, Cuba, January 2017&lt;/div&gt;
+&lt;&lt;set $phone to true&gt;&gt; &lt;&lt;set $chat to true&gt;&gt;
+After a delay in the original flight timings and a few detours, we finally land in Havana. Everyone is assigned a host family to stay with, so the group splits up and goes to their individual houses. Just before we leave, Rachel Weiss announces the schedule for the next day at dinner and it includes visiting Instituto Superior de Arte (ISA)--The National Art Schools of Cuba.
 
-&lt;iframe id=&quot;iframeBg&quot; src=&quot;https://drive.google.com/file/d/1h69_g0KWrOEewpZ_xpp1PYOMvApY7WU9/preview&quot;&gt;&lt;/iframe&gt;
+&lt;img src=&quot;img/cuba01.jpg&quot; width=&quot;100%&quot; height=&quot;auto&quot;&gt;
 
-&lt;hr&gt;
 &lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Sleep|visit ISA]]
-&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Fly back to chicago" tags="" position="437,995" size="100,100">
-&lt;div class=&quot;top&quot;&gt;2018 Chicago, United States
-&lt;hr&gt;
-&lt;/div&gt;
-You receive email from the New Arts Journalism department:
+&lt;&lt;button &quot;Check phone&quot; &quot;noInternet&quot;&gt;&gt;&lt;&lt;script&gt;&gt;
+Dialog.setup(&quot;Instagram&quot;);
+Dialog.wiki(Story.get(&quot;nointernetInstagram&quot;).processText());
+Dialog.open();
+&lt;&lt;/script&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Chat with new host&quot; &quot;chatwithHost&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Sleep&quot; &quot;visit ISA&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Fly back to chicago" tags="" position="819,698" size="100,100">&lt;div class=&quot;top&quot;&gt;Chicago, United States,2017&lt;/div&gt;
 
-FM7 came to Chicago, they had a show.
+In August of the same year you find out that Fabián, Mario and Eliane are visiting School of the Art Institute of Chicago (SAIC). F.M.7 will give a talk at SAIC and have a show in Pilsen, a neighbourhood filled with emerging art galleries. 
 
-&lt;hr&gt;
 &lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;
-&lt;&lt;if $number is true&gt;&gt;[[Want to go to the show|Text FM7]]
-&lt;&lt;else&gt;&gt;[[Want to go to the show|go to the show]]&lt;&lt;/if&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Need to finish a report tonight]]
-&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Eat donuts" tags="" position="720,999" size="100,100">&lt;div class=&quot;top&quot;&gt;Chicago, United States
-&lt;hr&gt;
-&lt;/div&gt;
+&lt;&lt;button &quot;Go to the talk&quot; &quot;go to the talk&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Need to finish a report tonight&quot; &quot;Need to finish a report tonight&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="4" name="Eat donuts" tags="" position="1059,693.3333333333335" size="100,100">&lt;div class=&quot;top&quot;&gt;DuSable Bridge, Chicago, 2017&lt;/div&gt;
+&lt;img src=&quot;img/chicago.jpg&quot; width=&quot;60%&quot; height=&quot;auto&quot;&gt;
 &lt;div class=&quot;right&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Manisha&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;xxxxxxxxxxxxxxxxxxxxx
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;What is the difference between making digital art in and outside of Cuba?&lt;/div&gt;&lt;/div&gt;
+
 &lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Fabián:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;To create digital art outside Cuba is something completely different and not in terms of quality because we know artists who are creating really great digital art without looking at their contemporaries. Cuba is a developing country with public access to the internet only for the last five years. The first difference is the access to programs for creating digital art- even though they exist in Cuba it feels like a lie in contrast. &lt;/div&gt;&lt;/div&gt;
+&lt;&lt;timed 8s t8n&gt;&gt;&lt;div class=&quot;left&quot;&gt;
 &lt;div class=&quot;person&quot;&gt;Mario:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;xxxxxxxxxxxxxxxxxxxxx
+&lt;div class=&quot;content&quot;&gt;On the island there are almost no laws against piracy, but for example in  Holland you have to pay for these programs which is how it is in most countries, we suppose. In Cuba you don’t have to be a specialist in hacking into programs but outside while there is access to the internet there are a lot of restrictions in terms of rights of the creator and licensing.&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;ad&quot;&gt;
+YOUR 
+AD 
+HERE&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 13s t8n&gt;&gt;&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;button &quot;What has your experience in Chicago taught you?&quot; &quot;What do you think of this journey in Chicago?&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+</tw-passagedata><tw-passagedata pid="5" name="What do you think of this journey in Chicago?" tags="" position="1059,816" size="100,100">&lt;div class=&quot;right&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;What has your experience in Chicago taught you?
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;left&quot;&gt;
 &lt;div class=&quot;person&quot;&gt;Fabián:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;xxxxxxxxxxxxxxxxxxxxx
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;This trip taught us a lot about the world outside of Cuba. We learned that this social platform, Instagram, was a vital tool for sharing art with a wider audience, especially for emerging artists to reach a wider and more international audience. The best part of having this account was that apart from being a place to show finished work, it also gave us the opportunity to show our work given our limited access to the internet. We just set up our official instagram account &lt;span id=&quot;extend&quot;&gt;[[FM7 (@f.m.7.group)|https://www.instagram.com/f.m.7.group]]&lt;/span&gt;.&lt;/div&gt;&lt;/div&gt;
 
-
-&lt;hr&gt;
-&lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[&quot;What do you think of this journey in Chicago?&quot;]]
-&lt;/div&gt;
-&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="5" name="&quot;What do you think of this journey in Chicago?&quot;" tags="" position="848,999" size="100,100">&lt;div class=&quot;right&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Manisha&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;What do you think of this journey in Chicago?
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Fabián:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;This trip taught us a lot about the world outside of Cuba. We learned that this social platform, Instagram, was a vital tool for sharing art with a wider audience, especially for emerging artists to reach a wider and more international audience. The best part of having this account was that apart from being a place to show finished work, it also gave us the opportunity to show our work given our limited access to the internet. We just set up our official instagram account [[FM7 (@f.m.7.group)|https://www.instagram.com/f.m.7.group]].
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;left&quot;&gt;
+&lt;&lt;timed 8s t8n&gt;&gt;&lt;div class=&quot;left&quot;&gt;
 &lt;div class=&quot;person&quot;&gt;Mario:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt; Before this we were only able to show our work in galleries or pass it individually through PDFs. Day by day galleries are still elitist institutions and at times very conversative, but in our opinion, the internet with time is becoming one of the largest platforms for art distribution.
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt; Before this we were only able to show our work in galleries or pass it individually through PDFs. Day by day galleries are still elitist institutions and at times very conversative, but in our opinion, the internet with time is becoming one of the largest platforms for art distribution.&lt;/div&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
 
-
-&lt;hr&gt;
+&lt;&lt;timed 12s t8n&gt;&gt;
+&lt;div class=&quot;ad&quot;&gt;
+YOUR 
+AD 
+HERE&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 14s t8n&gt;&gt;
 &lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[follow them on instagram]]
-&lt;/div&gt;
-&lt;div class=&quot;choice&quot;&gt;[[&quot;How different is it to make work in Chicago?&quot;]]
-&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="go to the show" tags="" position="858.6666666666666,1197" size="100,100">&lt;div class=&quot;top&quot;&gt;SAIC
-&lt;hr&gt;
-&lt;/div&gt;
-&lt;iframe src=&quot;https://fm7artist.files.wordpress.com/2020/03/received_14971545670410171299137888.jpeg?w=440&quot; width=&quot;440&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;
-
-They show their video work &lt;&lt;button &quot;Rayas blancas y negras&quot;&gt;&gt;
+&lt;&lt;button &quot;follow them on instagram&quot; &quot;followed&quot;&gt;&gt;
+&lt;&lt;set $instagramFollow to true&gt;&gt;
 &lt;&lt;script&gt;&gt;
-Dialog.setup(&quot;Rayas blancas y negras&quot;, &quot;charsheet&quot;);
+Dialog.setup(&quot;instagram&quot;);
+Dialog.wiki(Story.get(&quot;instagram&quot;).processText());
+Dialog.open();
+&lt;&lt;/script&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;go to the show&quot; &quot;Need to finish a report tonight&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="go to the talk" tags="talk" position="938,696" size="100,100">&lt;div class=&quot;top&quot;&gt;School of the Art Institute of Chicago, 2017&lt;/div&gt;
+
+You are excited to see them in Chicago, and you attend their talk.
+&lt;img src=&quot;img/chicago01.jpg&quot; width=&quot;100%&quot; height=&quot;auto&quot;&gt;
+
+&lt;div id=&quot;work&quot;&gt;
+They talk their video work &lt;&lt;link &quot;Rayas blancas y negras&quot;&gt;&gt;
+&lt;&lt;script&gt;&gt;
+Dialog.setup(&quot;Rayas blancas y negras&quot;);
 Dialog.wiki(Story.get(&quot;Rayas blancas y negras&quot;).processText());
 Dialog.open();
 &lt;&lt;/script&gt;&gt;
-&lt;&lt;/button&gt;&gt;&lt;&lt;button &quot;Sol, Un arquero, Un Filósofo&quot;&gt;&gt;
+&lt;&lt;/link&gt;&gt;, &lt;&lt;link &quot;Sol, Un arquero, Un Filósofo&quot;&gt;&gt;
 &lt;&lt;script&gt;&gt;
-Dialog.setup(&quot;Sol, Un arquero, Un Filósofo&quot;, &quot;charsheet&quot;);
+Dialog.setup(&quot;Sol, Un arquero, Un Filósofo&quot;);
 Dialog.wiki(Story.get(&quot;Sol, Un arquero, Un Filósofo&quot;).processText());
 Dialog.open();
 &lt;&lt;/script&gt;&gt;
-&lt;&lt;/button&gt;&gt; and installation work &lt;&lt;button &quot;El GRAN CONTENEDOR&quot;&gt;&gt;
+&lt;&lt;/link&gt;&gt; 
+and installation work &lt;&lt;link &quot;El Gran Contenedo&quot;&gt;&gt;
 &lt;&lt;script&gt;&gt;
-Dialog.setup(&quot;El GRAN CONTENEDOR&quot;, &quot;charsheet&quot;);
-Dialog.wiki(Story.get(&quot;El GRAN CONTENEDOR&quot;).processText());
+Dialog.setup(&quot;El Gran Contenedo&quot;);
+Dialog.wiki(Story.get(&quot;El Gran Contenedo&quot;).processText());
 Dialog.open();
 &lt;&lt;/script&gt;&gt;
-&lt;&lt;/button&gt;&gt;
+&lt;&lt;/link&gt;&gt;.&lt;/div&gt;
 
-The show ends.
+When you go say hello at the end they suggest grabbing some donuts before their show. 
 
-&lt;hr&gt;
 &lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Go home and finish the report tonight|Need to finish a report tonight]]
-&lt;/div&gt;
-&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="7" name="during pandemic" tags="" position="300,1500" size="100,100">global pandemic, you reach out them on instagram. Ask for an interview.
+&lt;&lt;button &quot;Go get donuts with them&quot; &quot;Eat donuts&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Meet them at the show&quot; &quot;go to the show&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 
-[[interview]]</tw-passagedata><tw-passagedata pid="8" name="interview" tags="whatsapp" position="447,1502" size="100,100">&lt;div class=&quot;right&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;As a result of Covid19, the whole world has realized how much we really depend on the Internet and technology. Would you agree or you think it&#39;s false? 
-&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="7" name="interview" tags="whatsapp" position="338.66666666666663,1301.3333333333333" size="100,100">&lt;div class=&quot;top&quot;&gt;Conversation over Instagram, 2020&lt;/div&gt;
+
+&lt;div class=&quot;right&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;I saw that you are part of the programming at hot wheelz. What have you been doing these days?&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;FM7:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;We are in an era where art is being shared on the internet with intensity compared to in physical spaces, particularly during the Covid19 pandemic. Even galleries and museums are actively using social media like their virtual spaces in order to stay relevant. Everything is possible on the internet or so it seems, from exhibition, art fairs to sales themselves. Newer spaces are being created rapidly to promote art. We definitely think there will be a before and after Covid19 in the art world timelines, since we are being forced to adapt to these circumstances. 
+&lt;div class=&quot;content&quot;&gt;We’ve started a new project called A week for an artist (AWA) on Instagram. Every week we give artists unlimited access to express themselves on the profil.&lt;/div&gt;&lt;/div&gt;
+&lt;&lt;timed 3s t8n&gt;&gt;&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;It is in its experimental stages so we don’t know the outcome yet. It is primarily for cuban artists who are new to the world of the internet with unlimited access but a constraint of seven days. So we want to see how they make the app their own. We hope to cultivate an audience and encourage collaboration with other artists and projects. Hopefully it might even be possible to develop a physical connection with the participating artists since we haven’t met all of them in person. &lt;/div&gt;&lt;/div&gt; &lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 13s t8n&gt;&gt;&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;Hopefully it might even be possible to develop a physical connection with the participating artists since we haven’t met all of them in person. &lt;/div&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 15s t8n&gt;&gt;&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;button &quot;Yeah, it does feel like...&quot; &quot;Yeah, it does feel like&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Yeah, it does feel like" tags="whatsapp" position="458,1296.3333333333333" size="100,100">&lt;div class=&quot;top&quot;&gt;Conversation over Instagram, 2020&lt;/div&gt;
 
-On a more personal level, when we were in Chicago we discovered how comprehensive and essential the internet is to human development. It’s not that this is news to us, it&#39;s just a very different experience. To come from Cuba, it was a shock to us to be confronted by a city full of glass and steel buildings, the scale and of course technology. Something so simple and common like paying by credit card is something new to us, because on the island it’s analogy and in cash. It was like stepping out of a bubble, which we have lived in since we were born and the pace outside is completely different. Currently, many Cubans have mobile data on their phones even though it is very expensive over there but it&#39;s a way of trying to stay in touch with what is happening globally. 
-&lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;hr&gt;
-&lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[&quot;Can you describe your film CROMA?&quot;]]
-&lt;/div&gt;
-&lt;div class=&quot;choice&quot;&gt;[[&quot;Are there other projects that you are working on at the moment?&quot; ]]
-&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="&quot;Are there other projects that you are working on at the moment?&quot; " tags="whatsapp" position="602,1499" size="100,100">&lt;div class=&quot;right&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt; Are there other projects that you are working on at the moment?
-&lt;/div&gt;
+&lt;div class=&quot;right&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;Yeah, it does feel like newer spaces are being created rapidly to adapt to these circumstances. What about the impact on you directly?&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;FM7:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;A week for an artist (AWA) is a new platform on Instagram is something we are working on right now. Every week we give artists unlimited access to express themselves on the profil. It is in its experimental stages so we don’t know the outcome yet. AWA is only a platform for experimentation and visualizing for artists where we want to see each time how they make the app their own (it is primarily for cuban artists who are new to the world of the internet) with unlimited access but a constraint of seven days. It is interesting to see how much actual freedom and power these artists have each week. It is a varied space with different audiences and artist proposals. We hope to cultivate an audience and encourage collaboration with other artists and projects and to see if it&#39;s possible to develop a physical connection with the participating artists. 
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;On a more personal level, when we were in Chicago we discovered how comprehensive and essential the internet is to human development. It’s not that this is news to us, it&#39;s just a very different experience. &lt;/div&gt;&lt;/div&gt;
+&lt;&lt;timed 3s t8n&gt;&gt;&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;To come from Cuba, it was a shock to us to be confronted by a city full of glass and steel buildings, the scale and of course technology. Something so simple and common like paying by credit card is something new to us, because on the island it’s analogous and in cash. It was like stepping out of a bubble in which we have lived in since we were born. &lt;/div&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 13s t8n&gt;&gt;&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;Currently, many Cubans have mobile data on their phones even though it&#39;s very expensive, it&#39;s a way of trying to stay in touch with what is happening globally.&lt;/div&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
 
-
+&lt;&lt;timed 16s t8n&gt;&gt;
 &lt;hr&gt;
+&lt;div class=&quot;caption&quot;&gt;TNL Team: 
+Thank you for reading our interview with F.M.7. Please feel free to share this with your friends, press like button on our instagram and subsribe our newsletter for the most updated content of time-based art.&lt;/div&gt;
+&lt;&lt;button &quot;share&quot;&gt;&gt; &lt;&lt;script&gt;&gt;UI.share();&lt;&lt;/script&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;span id=&quot;noIcon&quot;&gt;&lt;a href=&quot;https://www.instagram.com/theneulithium/&quot;&gt;&lt;&lt;button &quot;like&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/a&gt;&lt;/span&gt;&lt;&lt;button &quot;subscribe&quot; &quot;newsletter subscribe&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="visit ISA" tags="" position="340.6666666666667,98" size="100,100">&lt;div class=&quot;top&quot;&gt;Instituto Superior de Arte, Havana, 2017&lt;/div&gt;
+
+The people who give us a tour of the school share their phone numbers with us in case we want to ask them more questions about the school.
+
+They are Fabián Alejandro González Escobar and Mario Sergio Alvarez, the students from ISA. They are also founders and members of the Artist Collective FM7. 
+
+&lt;img src=&quot;img/cuba02.jpg&quot; width=&quot;100%&quot; height=&quot;auto&quot;&gt;
+&lt;div class=&quot;caption&quot;&gt;There is someone playing an oboe in the building. The sound effect is amplified by the structure of the architecture.&lt;/div&gt;
+
 &lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[&quot;Can you describe your film CROMA?&quot;]]
-&lt;/div&gt;
-&lt;div class=&quot;choice&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="visit ISA" tags="" position="433,196" size="100,100">&lt;div class=&quot;top&quot;&gt;Instituto Superior de Arte, Havana
-&lt;hr&gt;
-&lt;/div&gt;
-
-Fabián Alejandro González Escobar and Mario Sergio Alvarez González are the students from ISA, they are also founders and members of the Artist Collective FM7. They gave you a tour around the school.
-
-&lt;div class=&quot;container&quot;&gt;
-&lt;iframe class=&quot;responsive-iframe&quot; src=&quot;https://drive.google.com/file/d/19KwVAbukRB19A_bjyOWvHRx1b7pbWEds/preview&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-
-There is someone playing instrument in the building. The sound effect is amplied by the structure of the architecture.
-
-&lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Fabián:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;&lt;p id=&quot;text&quot;&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;hr&gt;
-&lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;
-&lt;&lt;button &quot;take a video of the surrounding&quot;&gt;&gt;
+&lt;&lt;button &quot;Take a video&quot;&gt;&gt;
 &lt;&lt;script&gt;&gt;
-Dialog.setup(&quot;Recorded Video&quot;, &quot;charsheet&quot;);
+Dialog.setup(&quot;Recorded Video&quot;);
 Dialog.wiki(Story.get(&quot;video of the surroundings&quot;).processText());
 Dialog.open();
 &lt;&lt;/script&gt;&gt;
 &lt;&lt;/button&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;choice&quot;&gt;
-[[Walk downwards]]
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;&lt;button &quot;Walk downwards&quot; &quot;Walk downwards&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="10" name="Go back to hotel" tags="" position="701,698" size="100,100">&lt;div class=&quot;top&quot;&gt;Havana, Cuba, 2017&lt;/div&gt;
+&lt;img src=&quot;img/cuba08.jpg&quot; width=&quot;100%&quot; height=&quot;auto&quot;&gt;
+The next few days, you visit many artist studios, Museo Nacional de Bellas Artes, Chinatown, many private gallery spaces and the Museum of Revolution. 
+&lt;img src=&quot;img/cuba09.jpg&quot; width=&quot;60%&quot; height=&quot;auto&quot; style=&quot;text-align:center;&quot;&gt;
+&lt;div class=&quot;caption&quot;&gt;Until 2019, access to private wifi in homes was illegal in Cuba. Before that people had to rely on more secret and undercover networks to access the internet. The image above shows people crowded on the pavement because the hotel has wifi. &lt;/div&gt;
 
-/*javascript*/
-&lt;script&gt;
-var i = 0;
-var txt = &#39;ISA is a is a very liberal school. The architecture allows you to walk from the bottom of one building to the roop of another. However, the construction of the building is never fully completed.&#39;;
-var speed = 50;
-function typeWriter() {
-  if (i &lt; txt.length) {
-    document.getElementById(&quot;text&quot;).innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-typeWriter();
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="11" name="Go back to hotel" tags="" position="300,998" size="100,100">&lt;div class=&quot;top&quot;&gt;Havana, Cuba
-&lt;hr&gt;
-&lt;/div&gt;
-The next few days, you visited xxx, xxxx, xxxx,.
-&lt;iframe id=&quot;iframeBg&quot;  src=&quot;https://drive.google.com/file/d/1dJufhzmIR8APqKT0l0k6FsSpeK_FoL2v/preview&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;
-The study trips ends.
+While waiting in line to enter the Museum of Revolution, a man comes up to you and asks if you want an internet hotspot for 30 dollars. 
 
+This is the end of the study trip.
 
-&lt;hr&gt;
 &lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Fly back to chicago]]
-&lt;/div&gt;
-&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="12" name="Go for a drink" tags="" position="297,600" size="100,100">&lt;div class=&quot;top&quot;&gt;5ta F street, Havana
-&lt;hr&gt;
-&lt;/div&gt;
-&lt;iframe src=&quot;https://drive.google.com/file/d/13H46WoGDqzDm_A2ERvDpgyFbHCmRwW4q/preview&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;
-You get into a bright purple colectivos, a shared taxi in Cuba for transportation. It looks very old, from around the 1950s.
+&lt;&lt;button &quot;Fly back to chicago&quot; &quot;Fly back to chicago&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 
-&lt;iframe src=&quot;https://drive.google.com/file/d/1p2y_Ffje41BecIUnB0o1gWZb5Hg8EsrM/preview&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;
-You arrive xxx street around 10PM. Fabián led you to xxx which is most famous for its live jazz music.
+</tw-passagedata><tw-passagedata pid="11" name="Go for a drink" tags="" position="96,701" size="100,100">&lt;div class=&quot;top&quot;&gt;Calle 17, Havana, Cuba&lt;/div&gt;
 
+You get into a purple vintage Chevrolet from the 1950s. It makes a lot of creaking noises as you close the door. The engine purrs softly and driving above 40 mph makes the doors rattle. You enjoy the cool breeze from the ocean since you can’t really roll up the windows (the manual lever is broken). 
 
-&lt;hr&gt;
+&lt;img src=&quot;img/cuba06.jpg&quot; width=&quot;100%&quot; height=&quot;auto&quot;&gt;
+
+You sit down for dinner at a street cafe while you wait for them to arrive. You’ve gotten used to not having access to Google maps, social media and continuous internet. They call when they arrive and you use landmarks to find each other. You climb many stairs to get to a rooftop bar, it’s a bit difficult after eating so much food. 
+
 &lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Pay 10 CUC entrance fee|Enter the bar]]
-&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Enter the bar" tags="" position="434,599" size="100,100">&lt;div class=&quot;top&quot;&gt;xxxxxx bar
-&lt;hr&gt;
-&lt;/div&gt;
-&lt;div class=&quot;container&quot;&gt;
-&lt;iframe class=&quot;responsive-iframe&quot; src=&quot;https://i.pinimg.com/originals/ea/2e/6f/ea2e6f1c7cda41ae65f1b4b0bb628957.jpg&quot;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-The place is small with a low ceiling and dim light. A drum set sit on stage as you order a Mojito as the first of two drinks that came with the entrance fee. Finally, you can sit down and have a good conversation.
+&lt;&lt;button &quot;Enter the bar&quot; &quot;Enter the bar&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Enter the bar" tags="" position="218,699" size="100,100">&lt;div class=&quot;top&quot;&gt;Rooftop Bar, La Habana, 2017&lt;/div&gt;
 
-&lt;hr&gt;
+&lt;img src=&quot;img/cuba07.jpg&quot; width=&quot;100%&quot; height=&quot;auto&quot;&gt;
+&lt;div class=&quot;caption&quot;&gt;Image by @dwroesekejr&lt;/div&gt;
+
+The place is crowded so you make your way to the rooftop outdoor section. Mario and Fabián order drinks for everyone. They bring a friend along, Eliane, who is a conceptual artist and goes to ISA as well. As you wait for the drinks to arrive, you introduce yourself and ask them questions. 
+
 &lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[&quot;How do you know each other?&quot;]]
-&lt;/div&gt;
-&lt;div class=&quot;choice&quot;&gt;[[&quot;What inspire your art?&quot;]]
-&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="Walk downwards" tags="" position="576,201" size="100,100">&lt;div class=&quot;top&quot;&gt;Instituto Superior de Arte, Havana
-&lt;hr&gt;
-&lt;/div&gt;
-&lt;iframe src=&quot;https://drive.google.com/file/d/1p38KsEcAdDTrlK5SG60ae4ULU4TRSNzN/preview&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;
+&lt;&lt;button &quot;How do you know each other?&quot; &quot;How do you know each other?&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;What inspired your art?&quot; &quot;What inspired your art?&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="13" name="Walk downwards" tags="" position="454.66666666666663,101" size="100,100">&lt;div class=&quot;top&quot;&gt;Instituto Superior de Arte, Havana, 2017&lt;/div&gt;
+
+&lt;img src=&quot;img/cuba03.jpg&quot; width=&quot;100%&quot; height=&quot;auto&quot;&gt;
+
+The National Art Schools or the Escuelas Nacionales de Arte, established in 1976 and designed by Ricardo Porro, Roberto Gottardi and Vittorio Garatti. In 2011 the building, even though it remains unfinished, was declared a National Monument. More recently it has come to be known as the Instituto Superior de Arte and is said to be one of the most outstanding achievements of the Cuban Revolution. 
+
+The school consists of five art schools: the School of Modern Dance, the School of Plastic Arts, the School of Dramatic Arts, the School of Music and the School of Ballet. 
 
 You are curious about this artist collective. 
+
+&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;button &quot;what media of art do you use in your work?&quot; &quot;What art media do you use in your work?&quot;&gt;&gt; &lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Walk outside&quot; &quot;Walk outside&quot;&gt;&gt; &lt;&lt;/button&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="Walk outside" tags="" position="814.6666666666667,99.33333333333333" size="100,100">&lt;div class=&quot;top&quot;&gt;Instituto Superior de Arte, Havana, 2017&lt;/div&gt;
+
+&lt;img src=&quot;img/cuba04.jpg&quot; width=&quot;100%&quot; height=&quot;auto&quot;&gt;
+
+Previously a golf course, the space used to design the school was to become an integral part of the guiding design principles put in place by the three architects. So instead of demolishing it or making the land more even, it was integrated into the design. 
+
+The other two guiding principles were: the use of locally found materials like terracotta tiles and an organic form of construction called the Catalan vault. The last two were largely practical decisions because the US embargo against Cuba, which started in 1960, had made the import of rebar (reinforcements steel) and Portland cement very costly. 
+
+&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;button &quot;Keep walking&quot; &quot;tour end&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="15" name="video of the surroundings" tags="" position="342,223" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;iframe class=&quot;responsive-iframe&quot;  src=&quot;https://drive.google.com/file/d/1WXM5h00kMpPSp7dMDiNILS-Zdd9BcTLy/preview&quot; width=&quot;640&quot; height=&quot;480&quot; frameBorder=&quot;0&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="tour end" tags="" position="936,101" size="100,100">
+&lt;div class=&quot;top&quot;&gt;Instituto Superior de Arte, Havana, 2017&lt;/div&gt;
+
+&lt;img src=&quot;img/cuba05.jpg&quot; width=&quot;100%&quot; height=&quot;auto&quot;&gt;
+
+After the tour, along with a few people you decide to contact Fabián and Mario. They suggest meeting at a bar in downtown Havana. 
+
+&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Mario:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;Do you want to grab a drink? We know a place.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;button &quot;Go for a drink&quot; &quot;Go for a drink&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Go back to host house&quot; &quot;Go back to hotel&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="How do you know each other?" tags="" position="338,702" size="100,100">&lt;div class=&quot;right&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;How do you know each other?
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Mario :&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;We’ve known each other for 10 years. We met much before we started art school in Havana, San Alejandro. I remember back then we had a professor in common named Cueli who trained us between the ages of 14 and 15 to enter the Academy. At that time we weren’t very close but we started meeting more often in our final year. Unknowingly we had applied to the same place and we ended up spending more time together at Institute of Art.&lt;/div&gt;&lt;/div&gt;
+&lt;&lt;timed 8s t8n&gt;&gt;&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Fabián:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;But this group never managed to carry out projects, perhaps because we were so young and our ideas were still disorganized, but it helped us strengthen our relationship and realize that we had many ideas in common and worked well as a team. For some time after that we worked individually but we were always the first to see each other’s work and offer comments on each other’s ideas.&lt;/div&gt;
+&lt;/div&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 13s t8n&gt;&gt;
+&lt;&lt;button &quot;Tell me the story of F.M.7.&quot; &quot;What about the story of F.M.7?&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;What inspired your art?&quot; &quot;What inspired your art?&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="What inspired your art?" tags="" position="340,829" size="100,100">&lt;div class=&quot;right&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;What inspired your art?
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Fabián: &lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;We would say that we take our inspiration largely from cinema. On the international stage, video has lost the autonomy that it initially possessed and it has become increasingly easy to see works of high quality production, bringing it a lot closer to cinema. &lt;span id=&quot;extend&quot;&gt; &lt;&lt;link &quot;[read more]&quot;&gt;&gt; &lt;&lt;replace &quot;#extend&quot;&gt;&gt;If there was one thing that defined the production of Matthew Barney, an icon of virtual art, is his intent to break boundaries between genres with his grand productions and the incorporation of other disciplines like audiovisual installations, sculptures, drawings as well as photographs. We realize this trend is not new to international audiences but it is not common in video art in Cuba.&lt;&lt;/replace&gt;&gt; &lt;&lt;/link&gt;&gt; &lt;/span&gt;&lt;/div&gt;
+&lt;&lt;timed 8s t8n&gt;&gt;&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Mario: &lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;Today the lines between what is video art, video clip, cinema are being blurred frequently from a Kanye West Video, or Léos Carax&#39;s first film “Boy Meets Girl,” or high-budget production videos from artists like Bill Viola to Omer Fast. In these videos the limit no longer matters, what matters is the message delivery in a form that is most effective.&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 13s t8n&gt;&gt;&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;button &quot;Is there any artist that inspires you?&quot; &quot;Is there any artist that inspire you?&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+</tw-passagedata><tw-passagedata pid="19" name="What about the story of F.M.7?" tags="" position="342,944" size="100,100">&lt;div class=&quot;right&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Manisha&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;Tell me the story of F.M.7.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Mario:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;In 2015, we participated in the 12th Havana Biennale where we realized our first project together ‘The Grand Container.’ In the months leading up to the event, it seemed impossible to find a crane and container to place them in the space and exhibit it as part of our piece, I mean we were only 20-year old dreamers but we managed it. We learned to fight until the very end and that nothing is impossible, as long as you push your ideas.&lt;/div&gt;&lt;/div&gt;
+&lt;&lt;timed 8s t8n&gt;&gt;&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Fabián:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;A few years later, we formed the artist collective where we only produced work together. The name F.M.7 comes from combining our initials and the number something symbolic for us, it followed us around and let’s just say it tormented us until we made it a part of our world.&lt;/div&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 13s t8n&gt;&gt;&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;button &quot;Is there any artist that inspires you?&quot; &quot;Is there any artist that inspire you?&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Is there any artist that inspire you?" tags="" position="340,1060" size="100,100">&lt;div class=&quot;right&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;Is there any artist that inspires you?&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Mario: &lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;Currently there are many artists who we consider masters of film production, artists with a lot of knowledge about cinemogratographic codes. We would say Stan Douglas, Hans Op De Beeck, Dough Aitken, David Calerbout and Yang Fundong who in addition to being good producers, often urge viewers to be wary of alienation of the human being in reality. &lt;/div&gt;&lt;/div&gt;
+
+&lt;&lt;timed 8s t8n&gt;&gt;&lt;div class=&quot;right&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;Can you give me an example of work you like by them?&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Fabián:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;For instance Doug Aitken in “Electric Earth,” in his 9 minute 50 seconds video installation, places the human being at a crossroad with their relationship with social and natural spaces. Desert landscapes, industrial zones in ruins and  the consequence of global media culture mark the places and key sectors that artists occupy. &lt;/div&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 13s t8n&gt;&gt;&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Mario:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;Yang Fudong is another artist who includes people in search of themselves; reality and fiction come together in his works that constitute a very peculiar version of surrealism. Behind each scene, each individual motive and subtle gesture by actors are supposed to be images of the unknown and metaphors for life. One way or another the main interest of these artists is to show the perspective beneath the surface which often remains hidden.&lt;/div&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 16s t8n&gt;&gt;&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;button &quot;Finish the drink&quot; &quot;Finish the drink&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Finish the drink" tags="" position="458,701" size="100,100">&lt;div class=&quot;top&quot;&gt;Rooftop bar, La Habana, 2017&lt;/div&gt;
+
+It’s getting late. You notice the crowd thinning around you. You ask for the check and then decide to take a stroll before getting a cab back to your host house. 
+
+&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;button &quot;Go back to host house&quot; &quot;Go back to hotel&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="22" name="Need to finish a report tonight" tags="talk" position="220,1302" size="100,100">&lt;div class=&quot;top&quot;&gt;India, October 2020&lt;/div&gt;
+
+During lock down, you are browsing through instagram. You see that FM7 is showing two of their works on Hot Wheelz Festival, a live art platform, run by Jill Perez and Lauren Steinberg.
+&lt;div class=&quot;container&quot;&gt;
+&lt;iframe class=&quot;responsive-iframe&quot; src=&quot;https://player.vimeo.com/video/461008426&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
+Read more about &lt;&lt;link &quot;La Jungla&quot;&gt;&gt;
+&lt;&lt;script&gt;&gt;
+Dialog.setup(&quot;La Jungla&quot;);
+Dialog.wiki(Story.get(&quot;La Jungla&quot;).processText());
+Dialog.open();
+&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+
+&lt;div class=&quot;container&quot;&gt;&lt;iframe class=&quot;responsive-iframe&quot; src=&quot;https://player.vimeo.com/video/395659062&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
+Read more about &lt;&lt;link &quot;Croma&quot;&gt;&gt;
+&lt;&lt;script&gt;&gt;
+Dialog.setup(&quot;Croma&quot;);
+Dialog.wiki(Story.get(&quot;Croma&quot;).processText());
+Dialog.open();
+&lt;&lt;/script&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+
+&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;button &quot;Message them on Instagram&quot; &quot;interview&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="23" name="Rayas blancas y negras" tags="" position="938,817" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;iframe class=&quot;responsive-iframe&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DLLsnVYACss&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Sol, Un arquero, Un Filósofo" tags="" position="934,934" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;iframe class=&quot;responsive-iframe&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/hkC2gOPnlbc&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="El Gran Contenedo" tags="" position="935,1047" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;iframe class=&quot;responsive-iframe&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/5uUz-VA1XZM&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="How different is it to make work in Chicago?" tags="" position="1057,935" size="100,100">&lt;div class=&quot;right&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;What is the difference between making digital art in and outside of Cuba?&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Fabián:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;To create digital art outside Cuba is something completely different and not in terms of quality because we know artists who are creating really great digital art without looking at their contemporaries. Cuba is a developing country with public access to the internet only for the last five years. The first difference is the access to programs for creating digital art- even though they exist in Cuba it feels like a lie in contrast. &lt;/div&gt;&lt;/div&gt;
+
+&lt;&lt;timed 8s t8n&gt;&gt;&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Mario:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;On the island there are almost no laws against piracy, but for example in  Holland you have to pay for these programs which is how it is in most countries, we suppose. In Cuba you don’t have to be a specialist in hacking into programs but outside while there is access to the internet there are a lot of restrictions in terms of rights of the creator and licensing.&lt;/div&gt;&lt;/div&gt; &lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;timed 13s t8n&gt;&gt;&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;button &quot;go to the show&quot; &quot;Need to finish a report tonight&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+</tw-passagedata><tw-passagedata pid="27" name="Croma" tags="" position="215,1535" size="100,100">‘Croma’ is a video that tells the story of twin brothers who have assumed the role of dominator and dominated. The dominator imposes his perception of reality on the other through VR glasses and immerses him in a situation he considers to be the true reality. Meanwhile the dominated allows himself to be manipulated, wanting it as it becomes a vice and a desirable way to live. 
+
+The VR interpretations, over the course of the film, become increasingly blurred with lived reality which creates an ambiguity for viewers and the characters of the film. This confusion eventually seeps into the power roles between the twins. 
+
+This is intended as a metaphor for the desire to control their own reality. To question the strategies of manipulating reality that has been established by those in power is one of the fundamental objectives of this piece. Croma tries to explore the notion of virtual reality and a suspicion syndrome within these spaces that defines contemporary society today. 
+</tw-passagedata><tw-passagedata pid="28" name="What art media do you use in your work?" tags="" position="578,102" size="100,100">&lt;div class=&quot;top&quot;&gt;Instituto Superior de Arte, Havana, 2017&lt;/div&gt;
+
 &lt;div class=&quot;right&quot;&gt;
 &lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;&quot; What art media do you use in your work?&quot;
+&lt;div class=&quot;content&quot;&gt;&quot;What media of art do you use in your work?&quot;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;left&quot;&gt;
@@ -508,11 +681,9 @@ You are curious about this artist collective.
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;hr&gt;
+&lt;&lt;timed 9s t8n&gt;&gt;
 &lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Walk outside]]
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;&lt;button &quot;How would you describe your art?&quot; &quot;How would you describe your art?&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
 
 /*javascript*/
 &lt;script&gt;
@@ -527,10 +698,50 @@ function typeWriter() {
   }
 }
 typeWriter();
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="15" name="Walk outside" tags="" position="718,200" size="100,100">&lt;div class=&quot;top&quot;&gt;Instituto Superior de Arte, Havana
-&lt;hr&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="29" name="instagram" tags="" position="1302,812" size="100,100">&lt;div class=&quot;middle&gt;
+Followed
+
+&lt;div class=&quot;ad&quot;&gt;
+YOUR 
+AD 
+HERE&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="followed" tags="" position="1179,814" size="100,100">&lt;div class=&quot;right&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;What has your experience in Chicago taught you?
 &lt;/div&gt;
-&lt;iframe src=&quot;https://i.pinimg.com/originals/55/72/32/5572323521e5062d5c5cf7e6ffb20f43.jpg&quot; width=&quot;640&quot; height=&quot;300&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Fabián:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;This trip taught us a lot about the world outside of Cuba. We learned that this social platform, Instagram, was a vital tool for sharing art with a wider audience, especially for emerging artists to reach a wider and more international audience. The best part of having this account was that apart from being a place to show finished work, it also gave us the opportunity to show our work given our limited access to the internet. We just set up our official instagram account [[FM7 (@f.m.7.group)|https://www.instagram.com/f.m.7.group]].
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;left&quot;&gt;
+&lt;div class=&quot;person&quot;&gt;Mario:&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt; Before this we were only able to show our work in galleries or pass it individually through PDFs. Day by day galleries are still elitist institutions and at times very conversative, but in our opinion, the internet with time is becoming one of the largest platforms for art distribution.
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;button &quot;go to the show&quot; &quot;endof2017&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="noInternet" tags="" position="218,222" size="100,100">&lt;div class=&quot;top&quot;&gt;Havana, Cuba, January 2017&lt;/div&gt;
+&lt;&lt;set $phone to false&gt;&gt;
+After a delay in the original flight timings and a few detours, we finally land in Havana. Everyone is assigned a host family to stay with, so the group splits up and goes to their individual houses. Just before we leave, Rachel Weiss announces the schedule for the next day at dinner and it includes visiting Instituto Superior de Arte (ISA)--The National Art Schools of Cuba.
+
+&lt;img src=&quot;img/cuba01.jpg&quot; width=&quot;100%&quot; height=&quot;auto&quot;&gt;
+
+&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;if $chat is true&gt;&gt;&lt;&lt;button &quot;Chat with new host&quot; &quot;chatwithHost&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;button &quot;Sleep&quot; &quot;visit ISA&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="chatwithHost" tags="" position="216.33333333333334,331" size="100,100">&lt;div class=&quot;top&quot;&gt;Havana, Cuba, January 2017&lt;/div&gt;
+&lt;&lt;set $chat to false&gt;&gt;
+After a delay in the original flight timings and a few detours, we finally land in Havana. Everyone is assigned a host family to stay with, so the group splits up and goes to their individual houses. Just before we leave, Rachel Weiss announces the schedule for the next day at dinner and it includes visiting Instituto Superior de Arte (ISA)--The National Art Schools of Cuba.
+
+&lt;img src=&quot;img/cuba01.jpg&quot; width=&quot;100%&quot; height=&quot;auto&quot;&gt;
+
+&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;if $phone is true&gt;&gt;&lt;&lt;button &quot;Check phone&quot; &quot;noInternet&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;button &quot;Sleep&quot; &quot;visit ISA&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="nointernetInstagram" tags="" position="216,441" size="100,100">&lt;div class=&quot;middle&quot;&gt;&lt;div class=&quot;lds-spinner&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="How would you describe your art?" tags="" position="696.3333333333334,97.33333333333333" size="100,100">&lt;div class=&quot;top&quot;&gt;Instituto Superior de Arte, Havana, 2017&lt;/div&gt;
+
 &lt;div class=&quot;right&quot;&gt;
 &lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
 &lt;div class=&quot;content&quot;&gt;&quot;How would you describe your art?&quot;
@@ -543,11 +754,8 @@ typeWriter();
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;hr&gt;
-&lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[keep walking]]
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;&lt;timed 9s t8n&gt;&gt;&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;button &quot;Walk outside&quot; &quot;Walk outside&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
 
 /*javascript*/
 &lt;script&gt;
@@ -563,217 +771,16 @@ function typeWriter() {
   }
 }
 typeWriter();
-
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="16" name="video of the surroundings" tags="" position="431,349" size="100,100">&lt;iframe src=&quot;https://drive.google.com/file/d/1B1TOSGpj3_pR-uW5py8wrbg0tVpjvmp7/preview&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="17" name="tour end" tags="" position="996,199" size="100,100">
-&lt;div class=&quot;top&quot;&gt;Instituto Superior de Arte, Havana
-&lt;hr&gt;
-&lt;/div&gt;
-&lt;iframe src=&quot;https://drive.google.com/file/d/1lx1_lEHzIFJZiVRHP2_FJPBb4XGfYnem/preview&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;
-The tour comes to an end.
-&lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Mario:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;Do you want to grab a drink. There&#39;s a place we always hang out at.
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;hr&gt;
-&lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Go for a drink]]
-&lt;/div&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Go back to hotel]]
-&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="&quot;How do you know each other?&quot;" tags="" position="575,611" size="100,100">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.15.1/css/all.css&quot; integrity=&quot;sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;div class=&quot;right&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;&quot;How do you know each other?&quot;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Mario :&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;&lt;i class=&quot;fas fa-volume-up&quot;&gt;&lt;/i&gt; &lt;/div&gt;
-&lt;span id=&quot;Mario_know&quot;&gt; &lt;&lt;link &quot;convert to text&quot;&gt;&gt; &lt;&lt;replace &quot;#Mario_know&quot;&gt;&gt; &lt;div class=&quot;content&quot;&gt;It has been nearly 10 years since we’ve known each other. We met much before we started art school in Havana, San Alejandro. I remember back then we had a professor in common named Cueli who trained us between the ages of 14 and 15 to enter the Academy. At that time we weren’t very close but we started meeting more often in our final years at the Academy, specifically in the transition period to University. Upon graduation we realized that we had both applied to the Institute of Art and this brought us much closer and we became a group along with three other friends.&lt;/div&gt;&lt;&lt;/replace&gt;&gt; &lt;&lt;/link&gt;&gt; &lt;/span&gt;
-
-&lt;/div&gt;
-&lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Fabián:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;&lt;i class=&quot;fas fa-volume-up&quot;&gt;&lt;/i&gt; &lt;/div&gt;
-&lt;span id=&quot;Fabián_know&quot;&gt; &lt;&lt;link &quot;convert to text&quot;&gt;&gt; &lt;&lt;replace &quot;#Fabián_know&quot;&gt;&gt;
-&lt;div class=&quot;content&quot;&gt;&quot;But this group never managed to carry out projects, perhaps because we were so young and our ideas were still disorganized, but it helped us strengthen our relationship and realize that we had many ideas in common and worked well as a team. For some time after that we worked individually but we were always the first to see each other’s work and offer comments on each other’s ideas.&lt;/div&gt;&lt;&lt;/replace&gt;&gt; &lt;&lt;/link&gt;&gt; &lt;/span&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-&lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[&quot;What about the story of F.M.7?&quot;]]
-&lt;/div&gt;
-&lt;div class=&quot;choice&quot;&gt;[[&quot;What inspire your art?&quot;]]
-&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="&quot;What inspire your art?&quot;" tags="" position="577,724" size="100,100">&lt;div class=&quot;right&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;What inspire your art?
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Fabián: &lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;We would say that we take our inspiration largely from cinema since the largest production we have done is video work. This medium not only allows us to express, but also is the way in which society understands its relationships within the world and views itself. On the international stage, video has lost the autonomy that it initially possessed and it has become increasingly easy to see works of high quality production, bringing it a lot closer to cinema than the first experiments in television. If there was one thing that defined the production of Matthew Barney, an icon of virtual art, is his intent to break boundaries between genres with his grand productions and the incorporation of other disciplines like audiovisual installations, sculptures, drawings as well as photographs. We realize this trend is not new to international audiences but it is not common in video art in Cuba. 
-Today the lines between what is video art, video clip, cinema are being blurred frequently from a Kanye West Video, or Léos Carax&#39;s first film “Boy Meets Girl,” or high-budget production videos from artists like Bill Viola to Omer Fast. In all of these examples, the artist is the one who has the right to define what they produce. These videos function the same way they would in a cinema as they would in an art gallery, the limit no longer matters, what matters is the message delivery in a form that is most effective. 
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Mario: &lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt; In the movie, the theme of being alienated, dominated by an external entity, the confrontation between reality and fiction has never gone out of style. Take for instance films like: The Lawnmower Man, The Matrix, Fight Club, Inception, Holy Motors and The Truman Show.
-
-In the films by Cuban director Fernando Pérez, dreams play a vital role in integrating speech as an emotional refuge that stimulates the liberation of characters. In ‘Madagascar,’ the protagonist Laura, a university professor at a prestigious university, describes the conflict in the following way: “The problem is that I sleep, doctor. I sleep and dream. But I dream of the exact reality of the everyday. Those who live for twelve hours I live for twenty-four. I would like to dream of something different. About anything different. But no. It&#39;s always the same.
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;hr&gt;
-&lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Is there any artist that inspire you?]]
-&lt;/div&gt;
-&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="20" name="&quot;What about the story of F.M.7?&quot;" tags="" position="738,601" size="100,100">&lt;div class=&quot;right&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Manisha&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;What about the story of F.M.7?&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;xx&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;In 2015, we participated in the 12 Havana Biennale, where we realized our first project together ‘The Grand Container.’. It was a stressful time and in those moments we realized that we could achieve complex ideas collectively. In the months leading up to the event, it seemed impossible to find a crane and container to place them in the space and exhibit it as part of our piece, I mean we were only 20 year old dreamers. The most memorable parts were the routes and procedures we had to invent in order to get the work done, for which are infinitely grateful. We learned to fight until the very end and that nothing is impossible, as long as you push your ideas.
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;xx&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;A few years later, we formed the Artist Collective where we only produced work together. The name FM7 comes from combining our initials and the number something symbolic for us, it followed us around and let’s just say it tormented us until we made it a part of our world. &lt;/div&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-&lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Is there any artist that inspire you?]]
-&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="Is there any artist that inspire you?" tags="" position="742,722" size="100,100">&lt;div class=&quot;right&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Manisha&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;Is there any artist that inspire you?
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;xx&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;Currently there are many artists who we consider masters of film production, artists with a lot of knowledge about cinemogratographic codes. In addition to the above we would say Stan Douglas, Hans Op De Beeck, Dough Aitken, David Calerbout and Yang Fundong who in addition to being good producers, often urge viewers to be wary of alienation of the human being in reality. For instance Doug Aitken in “Electric Earth,” in his 9 minute 50 seconds video installation, places the human being at a crossroad with their relationship with social and natural spaces. Desert landscapes, industrial zones in ruins and  the consequence of global media culture mark the places and key sectors that artists occupy. Yang Fudong is an artist who includes people in search of themselves; reality and fiction come together in his works that constitute a very peculiar version of surrealism. Behind each scene, each individual motive and subtle gesture by actors are supposed to be images of the unknown and metaphors for life. One way or another the main interest of these artists is to show the perspective beneath the surface which often remains hidden. 
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;hr&gt;
-&lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Finish the drink]]
-&lt;/div&gt;
-&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="22" name="Finish the drink" tags="" position="882,721" size="100,100">&lt;div class=&quot;top&quot;&gt;xxxxxx bar
-&lt;hr&gt;
-&lt;/div&gt;
-Music soon takes over the small space which gets more crowded since you arrived. The four Cuban Jazz artists group is with high energy. They are doing a modern fusion of styles, blending some great traditional into the mix. 
-
-After one long set and you decide to leave.
-
-&lt;hr&gt;
-&lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;
- &lt;&lt;linkreplace &quot;Exchange numbers with them&quot;&gt;&gt;&lt;&lt;set $number to true&gt;&gt;You have their numbers&lt;&lt;/linkreplace&gt;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Go back to hotel|Go back to hotel]]
-&lt;/div&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Text FM7" tags="" position="583,997" size="100,100">You are excited to see them in Chicago, you want to text them before going to the show.
-&lt;div class=&quot;right&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;Hey! I heard that you two are visitng Chicago. I am planning to go to your show tonight.
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;br&gt;&lt;br&gt;
-
-&lt;hr&gt;
-&lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Want to grab some donuts at the lake before the show?|Eat donuts]]
-&lt;/div&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Looking forward to see you later!|go to the show]]
-&lt;/div&gt;
-&lt;&lt;button&gt;&gt;Send&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Need to finish a report tonight" tags="" position="442,1247" size="100,100">&lt;div class=&quot;top&quot;&gt;October 2020 India
-&lt;hr&gt;
-&lt;/div&gt;
-During lock down, you are browsing through instagram. You saw that FM7 is showing their work at hot wheelz.
-
-La Jungla is a tour through a 3D immersive space that is at once virtual yet life-like. 
-&lt;iframe src=&quot;https://player.vimeo.com/video/461008426&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-Viewers are guided through a fecund space enclosed in an architecture at times, reminiscent of the abandoned art school buildings on the grounds of the Cuban National Art Schools (Instituto Superior de Arte). 
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="35" name="2020" tags="time dark" position="101,1310.3333333333335" size="100,100">
+&lt;div class=&quot;middle&quot;&gt;&lt;div class=&quot;lds-spinner&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;span id=&quot;year&quot;&gt;2017&lt;/span&gt;&lt;/div&gt;
+&lt;&lt;timed 5s t8n&gt;&gt; &lt;&lt;replace &quot;#year&quot;&gt;&gt;2018&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 8s t8n&gt;&gt; &lt;&lt;replace &quot;#year&quot;&gt;&gt;2019&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 11s t8n&gt;&gt; &lt;&lt;replace &quot;#year&quot;&gt;&gt;2020&lt;&lt;/replace&gt;&gt; &lt;&lt;/timed&gt;&gt;&lt;&lt;timed 13s t8n&gt;&gt; &lt;&lt;goto &quot;Need to finish a report tonight&quot;&gt;&gt; &lt;&lt;/timed&gt;&gt;
 
 
-&lt;hr&gt;
-&lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Email them ask for an interview|interview]]
-&lt;/div&gt;
-&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="25" name="follow them on instagram" tags="" position="985,885" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="26" name="Rayas blancas y negras" tags="" position="1001,1197" size="100,100">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DLLsnVYACss&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="27" name="Sol, Un arquero, Un Filósofo" tags="" position="1130,1199" size="100,100">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/hkC2gOPnlbc&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="28" name="El GRAN CONTENEDOR" tags="" position="1257,1199" size="100,100">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/5uUz-VA1XZM&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="29" name="&quot;How different is it to make work in Chicago?&quot;" tags="" position="989,997" size="100,100">&lt;div class=&quot;right&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Manisha&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;How different is it to make work in Chicago?
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;xxx&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;To create digital art outside Cuba is something completely different and not in terms of quality because we know artists who are creating really great digital art without looking at their contemporaries. Although there is a difference in scale and materials being used. Cuba is a developing country with public access to the internet only for the last five years. The first difference I have found is the access to programs for creating digital art- even though they exist in Cuba it feels like a lie in contrast. On the island there are almost no laws against piracy, but in Holland (which is where Mario is currently) you have to pay for these programs which is how it is in most countries, we suppose. In Cuba you don’t have to be a specialist in hacking into programs but here while there is access to the internet there are a lot of restrictions in terms of rights of the creator and licensing. I want to add that digital art and new media have been linked together for a long time in Cuban art, only that new forms that keep us up to date internationally have been introduced only more recently. 
-&lt;/div&gt;
-&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="36" name="at the show" tags="darkBG" position="100,1418.1666564941406" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;iframe class=&quot;responsive-iframe&quot; src=&quot;https://drive.google.com/file/d/1GkJxbGZdjeJdJkZE4metACi3m6XERKuS/preview&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="endof2017" tags="dark" position="105.00000000000007,1199.166666666667" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;iframe class=&quot;responsive-iframe&quot; src=&quot;https://drive.google.com/file/d/1GkJxbGZdjeJdJkZE4metACi3m6XERKuS/preview&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 
-&lt;hr&gt;
-&lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[go to the show]]
-&lt;/div&gt;
-&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="30" name="&quot;Can you describe your film CROMA?&quot;" tags="" position="597,1652" size="100,100">&lt;div class=&quot;right&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;Can you describe your film CROMA? What is it about?
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;FM7:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;‘Croma’ is a video that tells the story of twin brothers who have assumed the role of dominator and dominated. The dominator imposes his perception of reality on the other through VR glasses and immerses him in a situation he considers to be the true reality. No matter what, it is always important for the dominator to not lose control. Meanwhile the dominated allows himself to be manipulated, wanting it as it becomes a vice and additions- he needs a leader to make his decisions for him. This becomes a desirable way to live. The VR interpretations, over the course of the film, become increasingly blurred with lived reality which creates an ambiguity for viewers and the characters of the film. This confusion eventually seeps into the power roles between the twins. This is intended as a metaphor for the desire to control their own reality. 
-
-To question the strategies of manipulating reality that has been established by those in power is one of the fundamental objectives of this piece. Croma tries to explore the notion of virtual reality that defines contemporary society today. This refers to not just the stories suggested by technological paraphernalia but more of a suspicion syndrome that prevails within our own immediate cultural spaces.
-This could be understood in the Hegelian conception of power dynamics where one ends up imposing their perception of reality on the other, generating malaise that creates apathy and inertia from both the dominator and the dominated. It is within this space of ambiguity where Croma situates itself. In  this space where notions of reality and virtual reality are in discord, ultimately suggesting that those previously firm ideas that protect man are the ones that put them in a state of crisis. 
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;hr&gt;
-&lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[Watch trailer]]
-&lt;/div&gt;
-&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="31" name="Watch trailer" tags="" position="597,1802" size="100,100">&lt;iframe title=&quot;vimeo-player&quot; src=&quot;https://player.vimeo.com/video/395659062&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="32" name="keep walking" tags="" position="865,199" size="100,100">&lt;div class=&quot;top&quot;&gt;Instituto Superior de Arte, Havana
-&lt;hr&gt;
-&lt;/div&gt;
-&lt;iframe src=&quot;https://i.pinimg.com/originals/55/72/32/5572323521e5062d5c5cf7e6ffb20f43.jpg&quot; width=&quot;640&quot; height=&quot;300&quot;&gt;&lt;/iframe&gt;
-
-&lt;div class=&quot;left&quot;&gt;
-&lt;div class=&quot;person&quot;&gt;Mario:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;&lt;p id=&quot;text&quot;&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;hr&gt;
-&lt;div class=&quot;middle&quot;&gt;
-&lt;div class=&quot;choice&quot;&gt;[[keep walking |tour end]]
-&lt;/div&gt;
-&lt;/div&gt;
-
-/*javascript*/
-&lt;script&gt;
-var i = 0;
-var txt = &#39;However this also increases misinformation about actual historical facts and mistrust in the solving mechanisms for the growing economic crisis. Complaining, dissenting and criticizing the daily reality each time is a common theme among them, but it has converted with time into a form of protest.&#39;;
-
-var speed = 50;
-function typeWriter() {
-  if (i &lt; txt.length) {
-    document.getElementById(&quot;text&quot;).innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  	}
-  }
-typeWriter();
-&lt;/script&gt;</tw-passagedata></tw-storydata>
+&lt;&lt;timed 10s t8n&gt;&gt; &lt;&lt;goto &quot;2020&quot;&gt;&gt; &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="La Jungla" tags="" position="220,1419.8333740234375" size="100,100">La Jungla is a tour through a 3D immersive space that is at once virtual yet life-like.Viewers are guided through a fecund space enclosed in an architecture at times, reminiscent of the abandoned art school buildings on the grounds of the Cuban National Art Schools (Instituto Superior de Arte).</tw-passagedata><tw-passagedata pid="39" name="StoryShare" tags="" position="580,1300.8333333333333" size="100,100">&lt;a&gt;www.theneulithium.github.io&lt;/a&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},errorPrologRegExp=/^(?:(?:uncaught\s+(?:exception:\s+)?)?\w*(?:error|exception|_err):\s+)+/i,Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(errorPrologRegExp,"")+".":": unknown error."),"object"===(void 0===n?"undefined":_typeof(n))&&null!==n&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}(),Patterns=function(){var e=function(){var e=new Map([[" ","\\u0020"],["\f","\\f"],["\n","\\n"],["\r","\\r"],["\t","\\t"],["\v","\\v"],[" ","\\u00a0"],[" ","\\u1680"],["᠎","\\u180e"],[" ","\\u2000"],[" ","\\u2001"],[" ","\\u2002"],[" ","\\u2003"],[" ","\\u2004"],[" ","\\u2005"],[" ","\\u2006"],[" ","\\u2007"],[" ","\\u2008"],[" ","\\u2009"],[" ","\\u200a"],["\u2028","\\u2028"],["\u2029","\\u2029"],[" ","\\u202f"],[" ","\\u205f"],["　","\\u3000"],["\ufeff","\\ufeff"]]),t=/^\s$/,r="";return e.forEach(function(e,n){t.test(n)||(r+=e)}),r?"[\\s"+r+"]":"\\s"}(),t="[\\u0020\\f\\t\\v\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000\\ufeff]",r="\\s"===e?"\\S":e.replace(/^\[/,"[^"),n="[0-9A-Z_a-z\\-\\u00c0-\\u00d6\\u00d8-\\u00f6\\u00f8-\\u00ff\\u0150\\u0170\\u0151\\u0171]",a=n.replace("\\-",""),i=function(){return"("+n+"+)\\(([^\\)\\|\\n]+)\\):|"+t+"*("+n+"+)"+t+"*:([^;\\|\\n]+);|"+t+"*((?:[#.]"+n+"+"+t+"*)+);"}();return Object.freeze({space:e,spaceNoTerminator:t,lineTerminator:"[\\n\\r\\u2028\\u2029]",notSpace:r,anyChar:"(?:.|[\\n\\r\\u2028\\u2029])",anyLetter:n,anyLetterStrict:a,identifierFirstChar:"[$A-Z_a-z]",identifierNextChar:"[$0-9A-Z_a-z]",identifier:"[$A-Z_a-z][$0-9A-Z_a-z]*",variableSigil:"[$_]",variable:"[$_][$A-Z_a-z][$0-9A-Z_a-z]*",macroName:"[A-Za-z][\\w-]*|[=-]",templateName:"[A-Za-z][\\w-]*",cssIdOrClassSigil:"[#.]",cssImage:"\\[[<>]?[Ii][Mm][Gg]\\[(?:\\s|\\S)*?\\]\\]+",inlineCss:i,url:"(?:file|https?|mailto|ftp|javascript|irc|news|data):[^\\s'\"]+"})}();!function(){function e(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n=void 0===t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var t=function(){function e(e,n){var a=String(e);if(!a)return a;switch(n){case"start":return t.test(a)?a.replace(t,""):a;case"end":return r.test(a)?a.replace(r,""):a;default:throw new Error('_trimString called with incorrect where parameter value: "'+n+'"')}}var t=new RegExp("^"+Patterns.space+Patterns.space+"*"),r=new RegExp(""+Patterns.space+Patterns.space+"*$");return e}();Array.prototype.flat||Object.defineProperty(Array.prototype,"flat",{configurable:!0,writable:!0,value:function(){function e(){if(null==this)throw new TypeError("Array.prototype.flat called on null or undefined");var t=0===arguments.length?1:Number(arguments[0])||0;return t<1?Array.prototype.slice.call(this):Array.prototype.reduce.call(this,function(r,n){return n instanceof Array?r.push.apply(r,_toConsumableArray(e.call(n,t-1))):r.push(n),r},[])}return e}()}),Array.prototype.flatMap||Object.defineProperty(Array.prototype,"flatMap",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatMap called on null or undefined");return Array.prototype.map.apply(this,arguments).flat()}}),Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(n===t||n!==n&&t!==t)return!0}return!1}}),Object.entries||Object.defineProperty(Object,"entries",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.entries object parameter must be an object");return Object.keys(e).map(function(t){return[t,e[t]]})}}),Object.fromEntries||Object.defineProperty(Object,"fromEntries",{configurable:!0,writable:!0,value:function(e){return Array.from(e).reduce(function(e,t){if(Object(t)!==t)throw new TypeError("Object.fromEntries iterable parameter must yield objects");return t[0]in e?Object.defineProperty(e,t[0],{configurable:!0,enumerable:!0,writable:!0,value:t[1]}):e[t[0]]=t[1],e},{})}}),Object.getOwnPropertyDescriptors||Object.defineProperty(Object,"getOwnPropertyDescriptors",{configurable:!0,writable:!0,value:function(e){if(null==e)throw new TypeError("Object.getOwnPropertyDescriptors object parameter is null or undefined");var t=Object(e);return Reflect.ownKeys(t).reduce(function(e,r){var n=Object.getOwnPropertyDescriptor(t,r);return void 0!==n&&(r in e?Object.defineProperty(e,r,{configurable:!0,enumerable:!0,writable:!0,value:n}):e[r]=n),e},{})}}),Object.values||Object.defineProperty(Object,"values",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.values object parameter must be an object");return Object.keys(e).map(function(t){return e[t]})}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:e(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:n+e(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return t(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return t(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return t(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return t(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r)<0&&(r=0),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n)<0&&(n=e-1),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){return e[0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1))]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var e=Array.from(this);if(0===arguments.length)return e;var t=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),r=t.length;if(0===r)return e;for(var n=Array.prototype.indexOf,a=Array.prototype.push,i=0;i<r;++i){var o=t[i];-1===n.call(e,o)&&a.call(e,o)}return e}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;-1!==(r=e.call(this,t,r));)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.concat.apply([],arguments),r=t.length,n=[],a=0;a<e;++a)for(var i=this[a],o=0;o<r;++o){var s=t[o];if(i===s||i!==i&&s!==s){n.push(a);break}}for(var u=[],l=0,c=n.length;l<c;++l)u[l]=this[n[l]];for(var d=Array.prototype.splice,f=n.length-1;f>=0;--f)d.call(this,n[f],1);return u}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"deleteWith",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.deleteWith called on null or undefined");if("function"!=typeof e)throw new Error("Array.prototype.deleteWith predicate parameter must be a function");var r=this.length>>>0;if(0===r)return[];for(var n=Array.prototype.splice,a=[],i=[],o=0;o<r;++o)e.call(t,this[o],o,this)&&(i.push(this[o]),a.push(o));for(var s=a.length-1;s>=0;--s)n.call(this,a[s],1);return i}}),Object.defineProperty(Array.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.first called on null or undefined");if(0!=this.length>>>0)return this[0]}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.last called on null or undefined");var e=this.length>>>0;if(0!==e)return this[e-1]}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do{a.push(n.call(this,_random(0,i--),1)[0])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){return this[0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)))]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do{o=_random(0,i)}while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.unshift,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function(e,t,r){var n=Number(e);return Number.isNaN(n)?NaN:n.clamp(t,r)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch(void 0===i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return-1!==String.prototype.indexOf.apply(this,arguments)}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;-1!==(n=t.call(this,e,n));)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.first called on null or undefined");return _getCodePointStartAndEnd(String(this),0).char}}),Object.defineProperty(String.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.last called on null or undefined");var e=String(this);return _getCodePointStartAndEnd(e,e.length-1).char}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n)<0&&(a=0):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return void 0!==r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.flat.call(this,1/0)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Opera:!t&&("object"===_typeof(window.operamini)||e.includes("opera mini")),Windows:t||/iemobile|wpdesktop/.test(e),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Opera||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null,u=e.includes("vivaldi");return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s,isVivaldi:u})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),r=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),n=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),a=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}(),i=function(){try{return"ontouchstart"in window||!!window.DocumentTouch&&document instanceof window.DocumentTouch||!!navigator.maxTouchPoints||!!navigator.msMaxTouchPoints}catch(e){}return!1}(),o=function(){try{for(var e=new Map([["transition","transitionend"],["MSTransition","msTransitionEnd"],["WebkitTransition","webkitTransitionEnd"],["MozTransition","transitionend"]]),t=[].concat(_toConsumableArray(e.keys())),r=document.createElement("div"),n=0;n<t.length;++n)if(r.style[t[n]]!==undefined)return e.get(t[n])}catch(e){}return!1}();return Object.freeze({audio:e,fileAPI:t,geolocation:r,mutationObserver:n,performance:a,touch:i,transitionEndEvent:o})}(),Visibility=function(){function e(){return a}function t(){return a&&document[a.stateProperty]||"visible"}function r(){return Boolean(a)}function n(){return Boolean(a&&document[a.hiddenProperty])}var a=function(){try{return Object.freeze([{hiddenProperty:"hidden",stateProperty:"visibilityState",changeEvent:"visibilitychange"},{hiddenProperty:"webkitHidden",stateProperty:"webkitVisibilityState",changeEvent:"webkitvisibilitychange"},{hiddenProperty:"mozHidden",stateProperty:"mozVisibilityState",changeEvent:"mozvisibilitychange"},{hiddenProperty:"msHidden",stateProperty:"msVisibilityState",changeEvent:"msvisibilitychange"}].find(function(e){return e.hiddenProperty in document}))}catch(e){}return undefined}();return Object.freeze(Object.defineProperties({},{vendor:{get:e},state:{get:t},isEnabled:{value:r},isHidden:{value:n},hiddenProperty:{value:a&&a.hiddenProperty},stateProperty:{value:a&&a.stateProperty},changeEvent:{value:a&&a.changeEvent}}))}(),Fullscreen=function(){function e(e){var t=e||document.documentElement;return t===document.documentElement&&("msRequestFullscreen"===f.requestFn||Browser.isOpera&&Browser.operaVersion<15)&&(t=document.body),t}function t(){return f}function r(){return(f||null)&&document[f.element]}function n(){return Boolean(f&&document[f.isEnabled])}function a(){return Boolean(f&&document[f.element])}function i(t,r){var n=this;if(!f)return Promise.reject(new Error("fullscreen not supported"));var i=e(r);if("function"!=typeof i[f.requestFn])return Promise.reject(new Error("fullscreen not supported"));if(a())return Promise.resolve();if(p())return i[f.requestFn](t);var o=".Fullscreen_requestFullscreen";return new Promise(function(e,r){jQuery(i).off(o).one(""+f.errorEvent+o+" "+f.changeEvent+o,function(t){jQuery(n).off(o),t.type===f.errorEvent?r(new Error("unknown fullscreen request error")):e()}),i[f.requestFn](t)})}function o(){var e=this;if(!f||"function"!=typeof document[f.exitFn])return Promise.reject(new TypeError("fullscreen not supported"));if(!a())return Promise.reject(new TypeError("fullscreen mode not active"));if(p())return document[f.exitFn]();var t=".Fullscreen_exitFullscreen";return new Promise(function(r,n){jQuery(document).off(t).one(""+f.errorEvent+t+" "+f.changeEvent+t,function(a){jQuery(e).off(t),a.type===f.errorEvent?n(new Error("unknown fullscreen exit error")):r()}),document[f.exitFn]()})}function s(e,t){return a()?o():i(e,t)}function u(t,r){if(f){var n=e(r);$(n).on(f.changeEvent,t)}}function l(t,r){if(f){var n=e(r);t?$(n).off(f.changeEvent,t):$(n).off(f.changeEvent)}}function c(t,r){if(f){var n=e(r);$(n).on(f.errorEvent,t)}}function d(t,r){if(f){var n=e(r);t?$(n).off(f.errorEvent,t):$(n).off(f.errorEvent)}}var f=function(){try{return Object.freeze([{isEnabled:"fullscreenEnabled",element:"fullscreenElement",requestFn:"requestFullscreen",exitFn:"exitFullscreen",changeEvent:"fullscreenchange",errorEvent:"fullscreenerror"},{isEnabled:"webkitFullscreenEnabled",element:"webkitFullscreenElement",requestFn:"webkitRequestFullscreen",exitFn:"webkitExitFullscreen",changeEvent:"webkitfullscreenchange",errorEvent:"webkitfullscreenerror"},{isEnabled:"mozFullScreenEnabled",element:"mozFullScreenElement",requestFn:"mozRequestFullScreen",exitFn:"mozCancelFullScreen",changeEvent:"mozfullscreenchange",errorEvent:"mozfullscreenerror"},{isEnabled:"msFullscreenEnabled",element:"msFullscreenElement",requestFn:"msRequestFullscreen",exitFn:"msExitFullscreen",changeEvent:"MSFullscreenChange",errorEvent:"MSFullscreenError"}].find(function(e){return e.isEnabled in document}))}catch(e){}return undefined}(),p=function(){function e(){if(null!==t)return t;if(t=!1,f)try{var e=document.exitFullscreen();e.catch(function(){}),t=e instanceof Promise}catch(e){}return t}var t=null;return e}();return Object.freeze(Object.defineProperties({},{vendor:{get:t},element:{get:r},isEnabled:{value:n},isFullscreen:{value:a},request:{value:i},exit:{value:o},toggle:{value:s},onChange:{value:u},offChange:{value:l},onError:{value:c},offError:{value:d}}))}(),_ref3=function(){function e(e){for(var t=e.cloneNode(!0),r=document.createDocumentFragment(),n=void 0;null!==(n=t.firstChild);){if(n.nodeType===Node.ELEMENT_NODE)switch(n.nodeName.toUpperCase()){case"BR":case"DIV":case"P":r.appendChild(document.createTextNode(" "))}r.appendChild(n)}return r.textContent}function t(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)return e;if(e instanceof String)return String(e);if(e instanceof Number)return Number(e);if(e instanceof Boolean)return Boolean(e);if("function"==typeof e.clone)return e.clone(!0);if(e.nodeType&&"function"==typeof e.cloneNode)return e.cloneNode(!0);var r=void 0;return e instanceof Array?r=new Array(e.length):e instanceof Date?r=new Date(e.getTime()):e instanceof Map?(r=new Map,e.forEach(function(e,n){return r.set(n,t(e))})):e instanceof RegExp?r=new RegExp(e):e instanceof Set?(r=new Set,e.forEach(function(e){return r.add(t(e))})):r=Object.create(Object.getPrototypeOf(e)),Object.keys(e).forEach(function(n){return r[n]=t(e[n])}),r}function r(e){
