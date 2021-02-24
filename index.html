@@ -110,7 +110,8 @@ font-family: 'GothamMedium','GothamBold','GothamBook',sans-serif;
 }
 #ui-bar{display:none;}
 #story{margin:3.5em;}
-#ui-dialog-body{width:100%; height:auto;font-size:1em;background-color:#000;;color:#e1deca;}
+
+#ui-dialog-body{width:100%; min-width: 380px; height:auto;font-size:1em;background-color:#000;;color:#e1deca;}
 #ui-dialog-titlebar {width:100%;background-color:#454545;color:#e1deca;height:1.3em;padding:0.5em;font-size:0.5em;text-align:center;font-variant: normal;}
 
 a{color:#828500;}
@@ -331,7 +332,31 @@ text-align:center;}
     opacity: 0;
   }
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="scene1" color="red"></tw-tag><tw-passagedata pid="1" name="story begins" tags="" position="95,101.66666666666667" size="100,100">&lt;div class=&quot;top&quot;&gt;MacLean 17th floor, New Arts Journalism lounge&lt;/div&gt;
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">/* Usage: <<popup "Link Text" "Pasage Name">> */
+Macro.add('popup', {
+	handler : function () {
+		if (this.args.length < 2) {
+			var errors = [];
+			if (this.args.length < 1) { errors.push('link text'); }
+			if (this.args.length < 2) { errors.push('passage name'); }
+			return this.error('no ' + errors.join(' or ') + ' specified');
+		}
+
+		var passage = this.args[1];
+		var $link   = $(document.createElement('a'));
+
+		$link
+			.attr('data-passage', passage)
+			.addClass('link-internal macro-popup')
+			.html(this.args[0])
+			.appendTo(this.output);
+
+		Dialog.addClickHandler($link, null, function () {
+			Dialog.setup($link.text(), 'popup');
+			Dialog.wiki(Story.get(passage).processText().trim());
+		});
+	}
+});</script><tw-tag name="scene1" color="red"></tw-tag><tw-passagedata pid="1" name="story begins" tags="" position="95,101.66666666666667" size="100,100">&lt;div class=&quot;top&quot;&gt;MacLean 17th floor, New Arts Journalism lounge&lt;/div&gt;
 &lt;div class=&quot;left&quot;&gt;
 &lt;img src=&quot;img/poster.png&quot; width=&quot;60%&quot; height=&quot;auto&quot;&gt;
 
@@ -342,7 +367,7 @@ text-align:center;}
 &lt;div class=&quot;middle&quot;&gt;
 &lt;&lt;button &quot;Sign up for the study trip&quot; &quot;landed Havana&quot;&gt;&gt;&lt;&lt;set $phone to true&gt;&gt; &lt;&lt;set $chat to true&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;button &quot;Maybe for next year&quot; &quot;Need to finish a report tonight&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
-&lt;&lt;set $instagramFollow to false&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="landed Havana" tags="" position="219.66666666666666,95.66666666666667" size="100,100">&lt;div class=&quot;top&quot;&gt;Havana, Cuba, January 2017&lt;/div&gt;
+&lt;&lt;set $instagramFollow to false&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="landed Havana" tags="" position="219.66666666666666,94" size="100,100">&lt;div class=&quot;top&quot;&gt;Havana, Cuba, January 2017&lt;/div&gt;
 After a delay in the original flight timings and a few detours, we finally land in Havana. Everyone is assigned a host family to stay with, so the group splits up and goes to their individual houses. Just before we leave, Rachel Weiss announces the schedule for the next day at dinner and it includes visiting Instituto Superior de Arte (ISA)--The National Art Schools of Cuba.
 
 &lt;img src=&quot;img/Cuba01.jpg&quot; width=&quot;98%&quot; height=&quot;auto&quot;&gt;
