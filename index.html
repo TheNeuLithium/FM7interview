@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Interview with FM7" startnode="35" creator="Twine" creator-version="2.3.9" ifid="3F5868B8-9F67-4F91-98B6-E490997B8F75" zoom="0.6" format="SugarCube" format-version="2.31.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+	<tw-storydata name="Interview with FM7" startnode="1" creator="Twine" creator-version="2.3.9" ifid="3F5868B8-9F67-4F91-98B6-E490997B8F75" zoom="0.6" format="SugarCube" format-version="2.31.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @font-face {font-family: GothamMedium; src:url("fonts/GothamMedium.otf");}
 @font-face {font-family: GothamBold;src: url("fonts/GothamBold.otf");}
 @font-face {font-family: GothamBook;src: url("fonts/GothamBook.otf");}
@@ -110,8 +110,8 @@ font-family: 'GothamMedium','GothamBold','GothamBook',sans-serif;
 }
 #ui-bar{display:none;}
 #story{margin:3.5em;}
-#ui-dialog-body{width:380px; height:auto;font-size:1em;background-color:#000;;color:#e1deca;}
-#ui-dialog-titlebar {background-color:#454545;color:#e1deca;height:1.3em;padding:0.5em;font-size:0.5em;text-align:center;font-variant: normal;}
+#ui-dialog-body{width:100%; height:auto;font-size:1em;background-color:#000;;color:#e1deca;}
+#ui-dialog-titlebar {width:100%;background-color:#454545;color:#e1deca;height:1.3em;padding:0.5em;font-size:0.5em;text-align:center;font-variant: normal;}
 
 a{color:#828500;}
 a:hover{ opacity:0.6;}
@@ -408,14 +408,14 @@ AD
 HERE&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 15s t8n&gt;&gt;
 &lt;div class=&quot;middle&quot;&gt;
-&lt;&lt;button &quot;Follow them on Instagram&quot; &quot;What do you think of this journey in Chicago?&quot;&gt;&gt;
+&lt;&lt;button &quot;Follow them on Instagram&quot; &quot;followed&quot;&gt;&gt;
 &lt;&lt;set $instagramFollow to true&gt;&gt;
 &lt;&lt;script&gt;&gt;
 Dialog.setup(&quot;instagram&quot;);
 Dialog.wiki(Story.get(&quot;instagram&quot;).processText());
 Dialog.open();
 &lt;&lt;/script&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;button &quot;Go to the show&quot; &quot;Need to finish a report tonight&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="go to the talk" tags="talk" position="938,696" size="100,100">&lt;div class=&quot;top&quot;&gt;School of the Art Institute of Chicago, 2017&lt;/div&gt;
+&lt;&lt;button &quot;Go to the show&quot; &quot;endof2017&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="go to the talk" tags="talk" position="938,696" size="100,100">&lt;div class=&quot;top&quot;&gt;School of the Art Institute of Chicago, 2017&lt;/div&gt;
 
 You are excited to see them in Chicago, and you attend their talk.
 &lt;img src=&quot;img/chicago01.png&quot; width=&quot;100%&quot; height=&quot;auto&quot;&gt;
@@ -651,16 +651,17 @@ Dialog.open();
 &lt;&lt;/script&gt;&gt;
 &lt;&lt;/link&gt;&gt;
 
-&lt;div class=&quot;middle&quot;&gt;
+
 &lt;&lt;if $instagramFollow is true&gt;&gt;
-&lt;&lt;button &quot;Message them on Instagram&quot; &quot;interview&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;div class=&quot;middle&quot;&gt;
+&lt;&lt;button &quot;Message them on Instagram&quot; &quot;interview&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;
 &lt;&lt;else&gt;&gt;
 &lt;hr&gt;
 &lt;div class=&quot;caption&quot;&gt;TNL Team: 
 Thank you for reading our interview with F.M.7. Please feel free to share this with your friends, press the like button on our instagram and subscribe to our newsletter for the most updated content of time-based art.
 &lt;/div&gt;
-&lt;&lt;button &quot;share&quot;&gt;&gt; &lt;&lt;script&gt;&gt;UI.share();&lt;&lt;/script&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;span id=&quot;noIcon&quot;&gt;&lt;a href=&quot;https://www.instagram.com/theneulithium/&quot; target=&quot;_blank&quot;&gt;&lt;&lt;button &quot;like&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/a&gt;&lt;/span&gt;&lt;&lt;button &quot;subscribe&quot; &quot;newsletter subscribe&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/endif&gt;&gt;
-&lt;/div&gt;
+&lt;&lt;button &quot;share&quot;&gt;&gt; &lt;&lt;script&gt;&gt;UI.share();&lt;&lt;/script&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;span id=&quot;noIcon&quot;&gt;&lt;a href=&quot;https://www.instagram.com/theneulithium/&quot; target=&quot;_blank&quot;&gt;&lt;&lt;button &quot;like&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/a&gt;&lt;/span&gt;&lt;&lt;button &quot;subscribe&quot; &quot;newsletter subscribe&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;/if&gt;&gt;
+
 </tw-passagedata><tw-passagedata pid="23" name="Rayas blancas y negras" tags="" position="938,817" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;iframe class=&quot;responsive-iframe&quot; width=&quot;100%&quot; height=&quot;auto&quot; src=&quot;https://www.youtube.com/embed/DLLsnVYACss&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Sol, Un arquero, Un Filósofo" tags="" position="934,934" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;iframe class=&quot;responsive-iframe&quot; width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/hkC2gOPnlbc&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="El Gran Contenedo" tags="" position="935,1047" size="100,100">&lt;div class=&quot;container&quot;&gt;
@@ -699,31 +700,33 @@ function typeWriter() {
   }
 }
 typeWriter();
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="28" name="instagram" tags="" position="1302,810.3333333333334" size="100,100">&lt;div class=&quot;middle&quot;&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="28" name="instagram" tags="" position="1183.6666666666667,817" size="100,100">&lt;div class=&quot;middle&quot;&gt;
 Followed&lt;/div&gt;
 
 &lt;div class=&quot;ad&quot;&gt;
-YOUR 
+THIS
+IS
+AN
 AD 
-HERE&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="followed" tags="" position="1175.3333333333333,814" size="100,100">&lt;div class=&quot;right&quot;&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="followed" tags="" position="1060.3333333333333,932.3333333333334" size="100,100">&lt;div class=&quot;right&quot;&gt;
 &lt;div class=&quot;person&quot;&gt;Manisha:&lt;/div&gt;
 &lt;div class=&quot;content&quot;&gt;What has your experience in Chicago taught you?
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;left&quot;&gt;
 &lt;div class=&quot;person&quot;&gt;Fabián:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt;This trip taught us a lot about the world outside of Cuba. We learned that this social platform, Instagram, was a vital tool for sharing art with a wider audience, especially for emerging artists to reach a wider and more international audience. The best part of having this account was that apart from being a place to show finished work, it also gave us the opportunity to show our work given our limited access to the internet. We just set up our official instagram account  &lt;span id=&quot;extend&quot;&gt;[[FM7(@f.m.7.group)|https://www.instagram.com/f.m.7.group]]&lt;/span&gt;.
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;This trip taught us a lot about the world outside of Cuba. We learned that this social platform, Instagram, was a vital tool for sharing art with a wider audience, especially for emerging artists to reach a wider and more international audience. The best part of having this account was that apart from being a place to show finished work, it also gave us the opportunity to show our work given our limited access to the internet. We just set up our official instagram account &lt;span id=&quot;extend&quot;&gt;[[FM7 (@f.m.7.group)|https://www.instagram.com/f.m.7.group]]&lt;/span&gt;.&lt;/div&gt;&lt;/div&gt;
+
 &lt;div class=&quot;left&quot;&gt;
 &lt;div class=&quot;person&quot;&gt;Mario:&lt;/div&gt;
-&lt;div class=&quot;content&quot;&gt; Before this we were only able to show our work in galleries or pass it individually through PDFs. Day by day galleries are still elitist institutions and at times very conversative, but in our opinion, the internet with time is becoming one of the largest platforms for art distribution.
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;div class=&quot;content&quot;&gt;Before this we were only able to show our work in galleries or pass it individually through PDFs. Day by day galleries are still elitist institutions and at times very conservative, but in our opinion, the internet with time is becoming one of the largest platforms for art distribution.&lt;/div&gt;&lt;/div&gt;
 
+&lt;div class=&quot;ad&quot;&gt;
+YOUR 
+AD 
+HERE&lt;/div&gt;
 &lt;div class=&quot;middle&quot;&gt;
-&lt;&lt;button &quot;go to the show&quot; &quot;endof2017&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="chatwithHost" tags="" position="213,337.6666666666667" size="100,100">You had a nice chat with the host on the balcony.
+&lt;&lt;button &quot;Go to the show&quot; &quot;endof2017&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="chatwithHost" tags="" position="213,337.6666666666667" size="100,100">You had a nice chat with the host on the balcony.
 &lt;&lt;set $chat to false&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="nointernetInstagram" tags="" position="215,214.99999999999994" size="100,100">&lt;div class=&quot;middle&quot;&gt;
 &lt;div class=&quot;lds-spinner&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;&lt;set $phone to false&gt;&gt;
@@ -764,10 +767,10 @@ typeWriter();
 
 
 </tw-passagedata><tw-passagedata pid="34" name="at the show" tags="darkBG" position="100,1418" size="100,100">&lt;div class=&quot;container&quot;&gt;
-&lt;iframe class=&quot;responsive-iframe&quot; src=&quot;https://drive.google.com/file/d/1GkJxbGZdjeJdJkZE4metACi3m6XERKuS/preview&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="endof2017" tags="dark" position="105,1199" size="100,100">&lt;div class=&quot;container&quot;&gt;
+&lt;iframe class=&quot;responsive-iframe&quot; src=&quot;https://drive.google.com/file/d/1GkJxbGZdjeJdJkZE4metACi3m6XERKuS/preview&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="endof2017" tags="dark" position="103.33333333333333,1199" size="100,100">&lt;div class=&quot;container&quot;&gt;
 &lt;iframe class=&quot;responsive-iframe&quot; src=&quot;https://drive.google.com/file/d/1GkJxbGZdjeJdJkZE4metACi3m6XERKuS/preview&quot; width=&quot;640&quot; height=&quot;480&quot; allow=&quot;autoplay&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
-
-&lt;&lt;timed 10s t8n&gt;&gt; &lt;&lt;goto &quot;2020&quot;&gt;&gt; &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="La Jungla" tags="" position="220,1419" size="100,100">La Jungla is a tour through a 3D immersive space that is at once virtual yet life-like. Viewers are guided through a fecund space enclosed in an architecture at times, reminiscent of the abandoned art school buildings on the grounds of the Cuban National Art Schools (Instituto Superior de Arte).</tw-passagedata><tw-passagedata pid="37" name="StoryShare" tags="" position="581.6666666666666,1300" size="100,100">&lt;a&gt;www.theneulithium.github.io&lt;/a&gt;</tw-passagedata><tw-passagedata pid="38" name="noInternet" tags="" position="95,218.33333333333331" size="100,100">&lt;div class=&quot;top&quot;&gt;Havana, Cuba, January 2017&lt;/div&gt;
+location:xxx xxx
+&lt;&lt;timed 13s t8n&gt;&gt; &lt;&lt;goto &quot;2020&quot;&gt;&gt; &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="La Jungla" tags="" position="220,1419" size="100,100">La Jungla is a tour through a 3D immersive space that is at once virtual yet life-like. Viewers are guided through a fecund space enclosed in an architecture at times, reminiscent of the abandoned art school buildings on the grounds of the Cuban National Art Schools (Instituto Superior de Arte).</tw-passagedata><tw-passagedata pid="37" name="StoryShare" tags="" position="583.3333333333333,1300" size="100,100">URL: https://theneulithium.github.io/FM7interview/index.html</tw-passagedata><tw-passagedata pid="38" name="noInternet" tags="" position="95,218.33333333333331" size="100,100">&lt;div class=&quot;top&quot;&gt;Havana, Cuba, January 2017&lt;/div&gt;
 After a delay in the original flight timings and a few detours, we finally land in Havana. Everyone is assigned a host family to stay with, so the group splits up and goes to their individual houses. Just before we leave, Rachel Weiss announces the schedule for the next day at dinner and it includes visiting Instituto Superior de Arte (ISA)--The National Art Schools of Cuba.
 
 &lt;img src=&quot;img/Cuba01.jpg&quot; width=&quot;98%&quot; height=&quot;auto&quot;&gt;
